@@ -56,3 +56,27 @@ def extract_frames(video_path, output_folder, interval_seconds=3):
     cap.release()
     print(f"Finished processing {video_path}\n")
 
+# Function to process all videos in a folder
+def process_videos_in_folder(input_folder, output_base_folder, interval_seconds=3):
+    # Get a list of all video files in the input folder
+    video_files = [f for f in os.listdir(input_folder) if f.endswith(('.mp4', '.avi', '.mov', '.mkv'))]
+    
+    if not video_files:
+        print(f"No video files found in {input_folder}")
+        return
+    
+    # Process each video file
+    for video_file in video_files:
+        video_path = os.path.join(input_folder, video_file)
+        
+        # Create a subfolder for each video's frames
+        video_name = os.path.splitext(video_file)[0]
+        output_folder = os.path.join(output_base_folder, video_name)
+        print(video_name)
+        # Extract frames from the video
+        # extract_frames(video_path, output_folder, interval_seconds)
+
+# Example usage
+input_folder = "./Data/Video"  # Folder containing video files
+output_base_folder = "./Data/Frame"  # Base folder to save extracted frames
+process_videos_in_folder(input_folder, output_base_folder, interval_seconds=3)
