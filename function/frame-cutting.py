@@ -72,9 +72,8 @@ def process_videos_in_folder(input_folder, output_base_folder, interval_seconds=
         # Create a subfolder for each video's frames
         video_name = os.path.splitext(video_file)[0]
         output_folder = os.path.join(output_base_folder, video_name)
-        print(video_name)
         # Extract frames from the video
-        # extract_frames(video_path, output_folder, interval_seconds)
+        extract_frames(video_path, output_folder, interval_seconds)
 
 # Example usage
 input_folder = "./Data/Video"  # Folder containing video files
