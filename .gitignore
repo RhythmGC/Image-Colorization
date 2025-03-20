@@ -2,3 +2,4 @@
 /env
 .env
 /DataProcessing/__pycache__
+/Service/Model/Weights

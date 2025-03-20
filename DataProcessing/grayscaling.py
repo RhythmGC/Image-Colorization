@@ -1,12 +1,12 @@
 import cv2
 import shutil
 import os
-
+os.chdir('E:\RhythmGC_Code\DAT\Image-Colorization')
 def grayscale(image, fileName,temp_output_path):
     # Convert to grayscale
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # Save the grayscale image
-    cv2.imwrite(f"{temp_output_path}/grayscale-{fileName}", gray_image)
+    cv2.imwrite(f"{temp_output_path}/{fileName}", gray_image)
     # print(f"Image saved in the folder {temp_output_path}/{fileName}")
     # print(fileName)
     # print(image.shape)
@@ -33,7 +33,11 @@ def processFolder(input_folder, output_folder):
         print(f"Processing {image_file}")
         processImage(f"{input_folder}/{image_file}", output_folder)
 
-processFolder('Data/original/Color_image/VIDEO1','Data/original/grayscale-image/VIDEO1')
-processFolder('Data/original/Color_image/VIDEO2','Data/original/grayscale-image/VIDEO2')
-processFolder('Data/original/Color_image/VIDEO3','Data/original/grayscale-image/VIDEO3')
-processFolder('Data/original/Color_image/VIDEO4','Data/original/grayscale-image/VIDEO4')
+processFolder  ('./Data/original/Color_image/VIDEO1_NhungNguoiVietLenHuyenThoai',
+                './Data/original/Grayscale_image/VIDEO1_NhungNguoiVietLenHuyenThoai')
+processFolder  ('./Data/original/Color_image/VIDEO2_VaoNamRaBac',
+                './Data/original/Grayscale_image/VIDEO2_VaoNamRaBac')
+processFolder  ('./Data/original/Color_image/VIDEO3_MuiCoChay',
+                './Data/original/Grayscale_image/VIDEO3_MuiCoChay')
+processFolder  ('./Data/original/Color_image/VIDEO4_HaNoi12NgayDem',
+                './Data/original/Grayscale_image/VIDEO4_HaNoi12NgayDem') 

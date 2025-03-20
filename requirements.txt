@@ -1,3 +1,16 @@
 requests
 python-dotenv
 opencv-python
+pymongo[srv]
+fastapi
+uvicorn
+uuid
+python-multipart
+pydantic
+python-dotenv
+python-multipart
+cloudinary
+tensorflow
+keras
+numpy
+pillow
