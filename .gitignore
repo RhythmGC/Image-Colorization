@@ -1,6 +1,7 @@
 /Data
 /env
 .env
-/DataProcessing/__pycache__
+__pycache__/
+**/__pycache__/
 /Service/Model/Weights
 .vscode
