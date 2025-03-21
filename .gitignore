@@ -5,3 +5,4 @@ __pycache__/
 **/__pycache__/
 /Service/Model/Weights
 .vscode
+/API/Model/Weight
