@@ -14,3 +14,4 @@ tensorflow
 keras
 numpy
 pillow
+matplotlib
